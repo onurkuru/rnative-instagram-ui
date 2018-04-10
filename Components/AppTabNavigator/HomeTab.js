@@ -6,7 +6,7 @@ import {
   ScrollView
 } from 'react-native';
 
-import { Container, Content, Icon, Thumbnail } from 'native-base'
+import { Container, Content, Icon, Thumbnail, Header, Body, Left, Right } from 'native-base'
 import CardComponent from '../CardComponent'
 
 class HomeTab extends Component {
@@ -22,7 +22,14 @@ static navigationOptions = {
 
 	render(){
 		return (
+
       <Container style={styles.container}>
+        <Header>
+          <Left><Icon name="ios-camera-outline"  style={{paddingLeft:10}} /></Left>
+          <Body><Text>Instagram</Text></Body>
+          <Right><Icon name="ios-send-outline" style={{paddingRight:10}} /></Right>
+        </Header>
+
 			 <Content>
 
           <View style={{height: 100}} >
