@@ -4,11 +4,22 @@ import {
   Text,
   View,
   Image,
+  Dimensions
 } from 'react-native';
 
 import { Container, Content, Icon, Thumbnail, Header, Body, Left, Right, Button } from 'native-base'
 
 import EntypoIcon from 'react-native-vector-icons/Entypo'
+
+
+  var images = [
+    require('../../assets/feeds/1.jpg'),
+    require('../../assets/feeds/2.jpg'),
+    require('../../assets/feeds/3.jpg'),
+    require('../../assets/feeds/4.jpg')
+  ]
+
+  var {width,height} = Dimensions.get('window')
 
 class ProfileTab extends Component {
 
@@ -20,21 +31,46 @@ static navigationOptions = {
 
   )
 }
-  
-constructor(props) {
-  super(props);
+    
+  constructor(props) {
+    super(props);
 
-  this.state = {
-    activeIndex: 0
-  };
-}
+    this.state = {
+      activeIndex: 0
+    };
+  }
 
-segmentClicked = (index) => {
+  segmentClicked = (index) => {
 
     this.setState({
         activeIndex : index
     })
-}
+  }
+
+  renderSectionOne = () => {
+
+    return images.map((image, index) => {
+       <View key={index} style={[{width: (width)/3}, {height: (width)/3}  ]} >
+         <Image style={{flex:1, width: undefined, height: undefined}}
+              source={image} />
+       </View>
+    })
+
+  } 
+
+  renderSection = () => {
+
+    if(this.state.activeIndex == 0)
+    {
+      return(
+          <View style={{flexDirection: 'row', flexWrap: 'wrap'  }}>
+           {this.renderSectionOne()}
+          </View>
+        )
+    }
+  }
+
+
 
 	render(){
 		return (
@@ -136,9 +172,10 @@ segmentClicked = (index) => {
               </View>
             </View>
 
+            {this.renderSection()}
+
           </View>
         </Content>
-
       </Container>
 		);
 	}
