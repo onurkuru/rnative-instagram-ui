@@ -20,6 +20,21 @@ static navigationOptions = {
 
   )
 }
+  
+constructor(props) {
+  super(props);
+
+  this.state = {
+    activeIndex: 0
+  };
+}
+
+segmentClicked = (index) => {
+
+    this.setState({
+        activeIndex : index
+    })
+}
 
 	render(){
 		return (
@@ -59,11 +74,68 @@ static navigationOptions = {
                       <Text>Edit Profile</Text>
                     </Button>
                     <Button dark bordered style={{ flex:1, marginRight: 10, marginLeft: 5, justifyContent: 'center', height: 30 }}>
-                      <Icon name="settings" />
+                      <Icon name="settings" style={{fontSize: 18}} />
                     </Button>
                   </View>
               </View>
             </View> 
+
+            <View style={{ padding: 10, paddingHorizontal: 10}} >
+              <Text style={{fontWeight: 'bold'}}>Onur Kuru</Text>
+              <Text>Digital Marketer</Text>
+              <Text>www.onurkuru.com</Text>
+            </View>
+
+            <View>
+              <View style={{ flexDirection: 'row', justifyContent:  'space-around', borderTopWidth: 1, borderTopColor: '#eae5e5' }}>
+                <Button 
+                  transparent
+                  onPress={() => this.segmentClicked(0)}
+                  active={this.state.activeIndex == 0}
+                >
+                  <Icon name="ios-apps-outline" 
+                      style={[this.state.activeIndex == 0 ? {}: {
+                        color: 'grey'
+                      } ]}
+                  />
+                </Button>
+                  <Button 
+                  transparent
+                  onPress={() => this.segmentClicked(1)}
+                  active={this.state.activeIndex == 1}
+                >
+                  <Icon name="ios-list-outline" 
+                      style={[this.state.activeIndex == 1 ? {}: {
+                        color: 'grey'
+                      } ]}
+                  />
+                </Button>
+                  <Button 
+                  transparent
+                  onPress={() => this.segmentClicked(2)}
+                  active={this.state.activeIndex == 2}
+                >
+                  <Icon name="ios-people-outline" 
+                      style={[this.state.activeIndex == 2 ? {}: {
+                        color: 'grey'
+                      } ]}
+                  />
+                </Button>
+                  <Button 
+                  transparent
+                  onPress={() => this.segmentClicked(3)}
+                  active={this.state.activeIndex == 3}
+                >
+                  <Icon name="ios-bookmark-outline" 
+                      style={[this.state.activeIndex == 3 ? {}: {
+                        color: 'grey'
+                      } ]}
+                  />
+                </Button>
+              
+              </View>
+            </View>
+
           </View>
         </Content>
 
