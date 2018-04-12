@@ -4,13 +4,14 @@ import {
   Text,
   View,
   Image,
-  Dimensions
+  Dimensions,
 } from 'react-native';
 
 import { Container, Content, Icon, Thumbnail, Header, Body, Left, Right, Button } from 'native-base'
 
 import EntypoIcon from 'react-native-vector-icons/Entypo'
 
+import CardComponent from '../CardComponent'
 
   var images = [
     require('../../assets/feeds/1.jpg'),
@@ -50,10 +51,12 @@ static navigationOptions = {
   renderSectionOne = () => {
 
     return images.map((image, index) => {
-       <View key={index} style={[{width: (width)/3}, {height: (width)/3}  ]} >
+      return (
+       <View key={index} style={[{width: (width)/3}, {height: (width)/3}, {marginBottom: 2}, index % 3 !== 0 ? {paddingLeft: 2} : {paddingLeft: 0}  ]} >
          <Image style={{flex:1, width: undefined, height: undefined}}
               source={image} />
        </View>
+       )
     })
 
   } 
@@ -68,6 +71,19 @@ static navigationOptions = {
           </View>
         )
     }
+
+    else if (this.state.activeIndex == 1)
+    {
+      return (
+        <View>
+          <CardComponent ImageSource="1" Likes="111" />
+          <CardComponent ImageSource="2" Likes="333" />
+          <CardComponent ImageSource="3" Likes="301" />
+          <CardComponent ImageSource="4" Likes="401" />
+        </View>
+      )
+    } 
+
   }
 
 
@@ -118,7 +134,7 @@ static navigationOptions = {
 
             <View style={{ padding: 10, paddingHorizontal: 10}} >
               <Text style={{fontWeight: 'bold'}}>Onur Kuru</Text>
-              <Text>Digital Marketer</Text>
+              <Text>Digital Marketer | React Native</Text>
               <Text>www.onurkuru.com</Text>
             </View>
 
