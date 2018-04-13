@@ -32,7 +32,9 @@ this.camera = cam;
 onBarCodeRead={this.onBarCodeRead.bind(this)}
 style={styles.preview}
 aspect={Camera.constants.Aspect.fill}>
-<Text style={styles.capture} onPress={this.takePicture.bind(this)}>[CAPTURE]</Text>
+<View style={styles.CircleShapeView}>
+<Text style={styles.capture} onPress={this.takePicture.bind(this)}><Icon name="camera" style={{color: 'black',fontSize: 42}} /></Text>
+   </View>
 </Camera>
 </View>
 );
@@ -67,13 +69,17 @@ justifyContent: 'flex-end',
 alignItems: 'center'
 },
 capture: {
-flex: 0,
-backgroundColor: '#fff',
-borderRadius: 5,
-color: '#000',
-padding: 10,
-margin: 40
-}
+flex: 1,
+paddingLeft: 20,
+paddingTop: 14,
+},
+  CircleShapeView: {
+    width: 70,
+    height: 70,
+    borderRadius: 70/2,
+    backgroundColor: '#fff',
+    marginBottom: 20
+},
 });
 
 AppRegistry.registerComponent('AddMediaTab', () => AddMediaTab);
