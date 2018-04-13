@@ -13,11 +13,18 @@ import EntypoIcon from 'react-native-vector-icons/Entypo'
 
 import CardComponent from '../CardComponent'
 
-  var images = [
+ var images = [
     require('../../assets/feeds/1.jpg'),
     require('../../assets/feeds/2.jpg'),
     require('../../assets/feeds/3.jpg'),
-    require('../../assets/feeds/4.jpg')
+    require('../../assets/feeds/4.jpg'),
+    require('../../assets/feeds/5.jpg'),
+    require('../../assets/feeds/6.jpg'),
+    require('../../assets/feeds/7.jpg'),
+    require('../../assets/feeds/8.jpg'),
+    require('../../assets/feeds/9.jpg'),
+    require('../../assets/feeds/10.jpg'),
+    require('../../assets/feeds/11.jpg')
   ]
 
   var {width,height} = Dimensions.get('window')

@@ -14,7 +14,14 @@ import { Container, Content, Icon, Item, Input, Thumbnail, Header, Body, Left, R
     require('../../assets/feeds/1.jpg'),
     require('../../assets/feeds/2.jpg'),
     require('../../assets/feeds/3.jpg'),
-    require('../../assets/feeds/4.jpg')
+    require('../../assets/feeds/4.jpg'),
+    require('../../assets/feeds/5.jpg'),
+    require('../../assets/feeds/6.jpg'),
+    require('../../assets/feeds/7.jpg'),
+    require('../../assets/feeds/8.jpg'),
+    require('../../assets/feeds/9.jpg'),
+    require('../../assets/feeds/10.jpg'),
+    require('../../assets/feeds/11.jpg')
   ]
 
   var {width,height} = Dimensions.get('window')
@@ -45,12 +52,11 @@ static navigationOptions = {
 	render(){
 		return (
 		<Container style={{flex: 1, backgroundColor: 'white'}}>
-        <Header>
-          <Item>
-           <Input placeholder="Search" />
-          </Item>
-        </Header>
-
+    <Header >
+      <View style={{padding : 10, flex: 3}}>
+           <Input placeholder="Search" style={{ borderRadius: 15, height: 15, backgroundColor: '#eee', textAlign: 'center' }}/>
+      </View>
+    </Header>
        <Content>
 
           <View style={{height: 100}} >
