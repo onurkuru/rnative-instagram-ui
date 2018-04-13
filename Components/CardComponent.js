@@ -26,7 +26,14 @@ static navigationOptions = {
     "1": require('../assets/feeds/1.jpg'),
     "2": require('../assets/feeds/2.jpg'),
     "3": require('../assets/feeds/3.jpg'),
-    "4": require('../assets/feeds/4.jpg')
+    "4": require('../assets/feeds/4.jpg'),
+    "5": require('../assets/feeds/5.jpg'),
+    "6": require('../assets/feeds/6.jpg'),
+    "7": require('../assets/feeds/7.jpg'),
+    "8": require('../assets/feeds/8.jpg'),
+    "9": require('../assets/feeds/9.jpg'),
+    "10": require('../assets/feeds/10.jpg'),
+    "11": require('../assets/feeds/11.jpg')
   }
 
 

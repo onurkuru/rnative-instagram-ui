@@ -88,6 +88,13 @@ static navigationOptions = {
           <CardComponent ImageSource="2" Likes="333" />
           <CardComponent ImageSource="3" Likes="301" />
           <CardComponent ImageSource="4" Likes="401" />
+          <CardComponent ImageSource="5" Likes="401" />
+          <CardComponent ImageSource="6" Likes="42" />
+          <CardComponent ImageSource="7" Likes="44" />
+          <CardComponent ImageSource="8" Likes="33" />
+          <CardComponent ImageSource="9" Likes="22" />
+          <CardComponent ImageSource="10" Likes="11" />
+          <CardComponent ImageSource="11" Likes="401" />
         </Content>
       </Container>
 
